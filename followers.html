@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Dog crazy!</title>
+
+      <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+      <link rel="stylesheet" href="CSS/styles.css">
+      <script type="text/javascript" src="JS/bootstrap.js"></script>
+      <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+
+      <script type="text/javascript" src="JS/app.js"></script>
+
+  </head>
+  
+  <body>
+    <ul>
+      <li><a href="profile.html">Back to Profile</a></li>
+      <li style="float:right"><button type="button" id="signOutBtn" class="btn"><a href="index.html">Sign out</a></button>
+      <li id="currentUser" style="float:right">Signed in as: </li>
+      <li id="currentUser" style="float:right"></li>
+    </ul>
+
+    <div  class="container" >
+        <!--Header-->
+        <div class="row align-items-start">
+            <div class="col-2"></div>
+  
+            <div class="col-8" style="text-align: center;">
+              <br><h3>Followers</h3><br>
+            </div>
+  
+            <div class="col-2"  ></div>
+        </div>
+  
+        <!--New Asset Box-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+  
+            <div class="col-8" style="text-align: center; ">
+              <button type="button" id="followersBtn" class="btn">View all followers</button>
+              <div style="padding:5px;">
+              </div>
+  
+              <div id="FollowerList">
+  
+  
+              </div>
+  
+            </div>
+  
+            <div class="col-2"></div>
+        </div>
+  </div>  
+   
+  </body>
+</html>
