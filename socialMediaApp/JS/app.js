@@ -161,8 +161,6 @@ function getUsers(){
       items.push("<button class='btn follow' id='followBtn'>Follow</button>" + "<br/>"+ "<br/>");
       }
       });
-      console.log("allUserIDs: " + allUserIDs);
-
       $('#UsersList').empty();
 
       $( "<ul/>", {
@@ -221,7 +219,6 @@ function getUserID(){
      contentType: 'application/json; charset=utf-8'
    }).done(function (userID) {
     user_ID = (userID[0][0].userID);
-    console.log("user_ID: "+ user_ID);
     getFollowers();
   });
 }
@@ -240,7 +237,7 @@ function getFollowers(){
     $.each(followers[0], function(key, val){
       followerIDs.push(val["UserID"])
     });
-    console.log("followerIDs: " + followerIDs);
+    
    });
 }
 
@@ -345,7 +342,7 @@ function getUsername(user_ID){
    }).done(function (retUsername) { 
     username = (retUsername[0][0].Username);
   });
-   console.log(username);
+  
    return username;
 }
 
@@ -378,7 +375,7 @@ function returnComments(image_ID){
      async: false
    }).done(function (retComments) { 
     $.each(retComments[0], function( key, val ) {
-      console.log(val['Username'], val['Comment']);
+      
       images.push("<div id='comments' style='text-align:left;'> <p> &nbsp;&nbsp;&nbsp;"+ val['Username'] + " said: " + val['Comment']+ "</p></div>");
     });
 
